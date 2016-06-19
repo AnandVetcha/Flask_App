@@ -22,6 +22,6 @@ def hello_world():
     plt.savefig(figfile, format='png')
     figfile.seek(0)
     figdata_png = base64.b64encode(figfile.getvalue())
-    result = figdata_png
+    result = str(figdata_png)[2:-1
     return render_template('output.html', result=result)
 
